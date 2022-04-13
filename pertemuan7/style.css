@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    background-color: midnightblue;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    width: 700px;
+    margin: auto;
+    padding: 8px;
+    margin: 50px;
+    background-color: white;
+}
+
+.navbar ul li{
+    display: inline-block;
+    padding: o 10px;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.navbar ul li a{
+    color: turquoise;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.navbar ul li ul{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.navbar ul li ul li{
+    display: block;
+}

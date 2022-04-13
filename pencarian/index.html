@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup",function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th{
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Ketikkan nama atau email untuk mencari data</p>
+    <input id="myInput" type="text" placeholder="cari..">
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Awal</th>
+                <th>Nama Akhir</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>Muhammad</td>
+                <td>Bashir</td>
+                <td>Muhammad@example.com</td>
+            </tr>
+            <tr>
+                <td>agus</td>
+                <td>Bashir</td>
+                <td>agus@example.com</td>
+            </tr>
+            <tr>
+                <td>adi</td>
+                <td>Muhammad</td>
+                <td>adi@example.com</td>
+            </tr>
+            <tr>
+                <td>didi</td>
+                <td>Bashir</td>
+                <td>didi@example.com</td>
+            </tr>
+            <tr>
+                <td>doni</td>
+                <td>dani</td>
+                <td>doni@example.com</td>
+            </tr>
+            <tr>
+                <td>hari</td>
+                <td>Bashir</td>
+                <td>hari@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
